@@ -59,5 +59,8 @@ bm.cycles=1000000
 bm.threads=8
 ```
 
+The entry point of the benchmark is the class:
+
+* com.couchbase.jbench.Start
 
 
