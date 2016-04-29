@@ -17,6 +17,8 @@
 package com.couchbase.jbench.repo;
 
 import com.couchbase.client.java.document.Document;
+import com.couchbase.jbench.Counters;
+import java.util.logging.Level;
 import rx.functions.Func1;
 
 /**
@@ -30,7 +32,7 @@ public class ErrorHandler implements Func1<Throwable, Document> {
     @Override
     public Document call(Throwable t) {
         
-        
+         CouchbaseRepository.LOG.log(Level.INFO, "#errors: {0}", Counters.COUNT_ERRORS.incrementAndGet());
          CouchbaseRepository.LOG.severe(t.toString());
          t.printStackTrace();
          return null;    
