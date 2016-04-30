@@ -33,7 +33,7 @@ cb.observe.replicate=0
 
 ```
 
-~ The tool is still under development and so not all params might be used yet
+> The tool is still under development and so not all params might be used yet
 
 * benchmark.properties
 
